@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpendWise Expense Tracker</title>
+  <!-- Link to the external standardized stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Navigation Header -->
+  <header class="navbar">
+    <div class="logo-container">
+      <span class="logo-img">📊</span>
+      <h1>SpendWise</h1>
+    </div>
+    <div class="nav-notifications">
+      <button class="icon-btn">
+        🔔 Alerts
+        <span class="badge">3</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Two-Column Master Grid Layout -->
+  <div class="dashboard-layout">
+
+    <!-- Left Sidebar: Add Expense Form Component -->
+    <aside class="sidebar">
+      <h2>Add Expense</h2>
+      <form id="expense-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="expense-name">Name</label>
+          <input type="text" id="expense-name" placeholder="e.g., Groceries" required>
+        </div>
+
+        <div class="form-group">
+          <label for="expense-amount">Amount (KSh)</label>
+          <input type="number" id="expense-amount" placeholder="0.00" required>
+        </div>
+
+        <div class="form-group">
+          <label for="expense-category">Category</label>
+          <select id="expense-category">
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Rent">Rent</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="expense-date">Date</label>
+          <input type="date" id="expense-date" required>
+        </div>
+
+        <button type="button" class="btn-primary">Add Expense</button>
+      </form>
+    </aside>
+
+    <!-- Right Main Content Panel: Financial Dashboard Insights -->
+    <main class="main-content">
+
+      <!-- Collapsible Guide -->
+      <section class="instructions-card">
+        <div class="instructions-banner">
+          <details open>
+            <summary>▼ How to use this tracker</summary>
+            <p>Set your initialization budget limit, log your day-to-day transactions, and monitor metrics dynamically.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Flexbox Performance Metric Summary Cards -->
+      <section class="summary-grid">
+        <div class="card">
+          <span class="card-title">Total Spent</span>
+          <span class="card-value value-total">KSh 1,208.70</span>
+        </div>
+        <div class="card">
+          <span class="card-title">Highest Category</span>
+          <span class="card-value value-highest">Rent (KSh 950.00)</span>
+        </div>
+        <div class="card">
+          <span class="card-title">Transactions</span>
+          <span class="card-value value-count">5 Items</span>
+        </div>
+      </section>
+
+      <!-- Data Ledger Responsive Table -->
+      <section class="table-card">
+        <h2>Recent Transactions</h2>
+        <div class="table-responsive">
+          <table class="transaction-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Weekly Groceries</td>
+                <td>KSh 120.50</td>
+                <td><span class="tag tag-food">Food</span></td>
+                <td>2026-03-01</td>
+                <td><button type="button" class="btn-delete">Delete</button></td>
+              </tr>
+              <tr>
+                <td>Monthly Bus Pass</td>
+                <td>KSh 45.00</td>
+                <td><span class="tag tag-transport">Transport</span></td>
+                <td>2026-03-02</td>
+                <td><button type="button" class="btn-delete">Delete</button></td>
+              </tr>
+              <tr>
+                <td>Apartment Rent</td>
+                <td>KSh 950.00</td>
+                <td><span class="tag tag-rent">Rent</span></td>
+                <td>2026-03-03</td>
+                <td><button type="button" class="btn-delete">Delete</button></td>
+              </tr>
+              <tr>
+                <td>Cinema Tickets</td>
+                <td>KSh 28.00</td>
+                <td><span class="tag tag-entertainment">Entertainment</span></td>
+                <td>2026-03-04</td>
+                <td><button type="button" class="btn-delete">Delete</button></td>
+              </tr>
+              <tr>
+                <td>Electricity Bill</td>
+                <td>KSh 65.20</td>
+                <td><span class="tag tag-other">Other</span></td>
+                <td>2026-03-05</td>
+                <td><button type="button" class="btn-delete">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Asset Video Embedding -->
+      <section class="media-card">
+        <h2>Smart Budgeting Tips</h2>
+        <div class="video-container">
+          <iframe 
+            src="https://youtube.com" 
+            title="Budgeting Guide" 
+            frameborder="0" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Fixed Help Anchor Action Item Button -->
+  <button class="fixed-help-btn">💬 Help</button>
+
+  <!-- Import script directly before closing layout container branch tag -->
+  <script src="script.js"></script>
+</body>
+</html>

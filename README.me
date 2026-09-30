@@ -1,0 +1,24 @@
+# SpendWise - Personal Budget & Expense Tracker
+
+## 📌 Project Description
+**SpendWise** is a lightweight, interactive web-based dashboard application designed to help individuals monitor their personal finances. The platform features a transactional entry logging workspace configured in Kenyan Shillings (KSh) where users can dynamically track running expenditure balances and view automated technical analysis metrics directly inside the browser developer console tool drawer.
+
+---
+
+## 🚀 Technical Core Functionality Breakdown
+
+### 1. Variables & Data Types
+The application utilizes explicit variable scopes to manage running financial data states cleanly:
+*   `const appName`: Statically holds the immutable application label string value.
+*   `let budgetInput` & `let expenseInput`: Mutable variables storing numeric inputs captured dynamically during initialization.
+*   `let balance` & `let weeklyBudget`: Computed tracking variables holding functional calculation outputs.
+
+### 2. User Input Collection & Type Conversion
+*   Captures user inputs cleanly using browser-level interactive window `prompt()` blocks.
+*   Converts incoming text data types into operational floating-point number primitives safely using the built-in `Number()` evaluation engine.
+
+### 3. Isolated Arithmetic Calculations & Reusable Functions
+To maintain clean code architecture, business math logic is separated into independent execution routines:
+*   `calculateBalance(budget, expense)`: Runs algebraic subtraction formulas to compute exact net cash remainders.
+*   `calculateWeeklyBudget(monthlyBudget)`: Evaluates division matrices to split long-term caps into stable weekly allocations.
+*   `logDashboardMetrics()`: Packages runtime variables and outputs them into a labeled console interface.
